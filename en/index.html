@@ -8,7 +8,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to make videos in Higgsfield — a free guide">
 <meta property="og:description" content="From a blank screen to a finished video: which model to pick, how to write a prompt, and what to add so it looks like real footage.">
-<meta property="og:url" content="https://viktorsukhachev20-design.github.io/higgsfield-guide/en/">
+<meta property="og:url" content="https://viktorsukhachev20-design.github.io/higgsfield-guide/">
 <meta property="og:image" content="https://viktorsukhachev20-design.github.io/higgsfield-guide/img/og-en.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -45,6 +45,9 @@ img{max-width:100%}
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 20px 12px;max-width:680px;margin:0 auto}
 .top img{height:46px;width:auto;display:block}
 .tag{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.top .right{display:flex;align-items:center;gap:14px}
+.top .lang{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:inherit;text-decoration:none;border:1px solid currentColor;padding:5px 9px}
+.top .lang:hover{background:var(--orange);border-color:var(--orange);color:#000}
 .head{max-width:680px;margin:0 auto}
 h1{position:relative;z-index:2;margin:28px 20px 0;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:clamp(58px,17vw,104px);line-height:.86;letter-spacing:-.005em}
 h1 em{display:block;font-family:var(--serif);font-style:italic;font-weight:400;text-transform:lowercase;color:var(--orange);font-size:.92em;line-height:.95;letter-spacing:-.02em;margin-top:.04em}
@@ -163,6 +166,12 @@ pre{margin:0;padding:16px;font-family:var(--mono);font-size:14px;line-height:1.6
 .final p{max-width:28em}
 .cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;padding:0 20px;margin-top:26px;background:#000;color:var(--white);text-decoration:none;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:26px;letter-spacing:.03em}
 .cta:hover{background:var(--white);color:#000}
+.cta.buy{background:var(--orange);color:#000}
+.cta.buy:hover{background:var(--ink);color:var(--white)}
+.cta.alt{background:var(--white);color:#000;margin-top:10px}
+.cta.alt:hover{background:#000;color:var(--white)}
+.price{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:30px;line-height:1.05;margin:26px 0 0}
+.price span{display:block;font-family:var(--body);font-weight:400;text-transform:none;font-size:15px;line-height:1.4;margin-top:6px;color:var(--mute-l)}
 footer{padding:26px 0 44px;font-size:14px;color:var(--mute-d)}
 
 @media print{.prompt button,nav.toc{display:none}.card,.prompt,.note,figure{break-inside:avoid}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
@@ -172,7 +181,7 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--mute-d)}
 <div class="ticks" aria-hidden="true"></div>
 <header class="top">
   <img src="../img/1.png" alt="sukhx" width="83" height="46">
-  <span class="tag">Free guide</span>
+  <span class="right"><span class="tag">Free guide</span><a class="lang" href="../ru/" title="Русская версия">RU</a></span>
 </header>
 <main>
 <div class="head">
@@ -475,11 +484,34 @@ My scene: [describe: who, what they are doing, where, how many seconds, vertical
  </div>
 </section>
 
+<section id="full" class="band light">
+ <div class="wrap">
+  <span class="num">Full guide</span>
+  <h2>Want the whole video, <em>not one shot?</em></h2>
+  <p>This guide got you to your first video. The full guide shows how I build a complete absurd reel, like the gladiators on scooters and Benjamin Franklin in 1985 Los Angeles.</p>
+  <div class="strip" style="padding:0;margin:24px 0">
+   <img src="../img/13.jpg" alt="A legionary rides an electric scooter through a Roman market" width="1440" height="1080" loading="lazy">
+   <img src="../img/14.jpg" alt="A cashier holds a hundred-dollar bill next to Benjamin Franklin" width="1440" height="1080" loading="lazy">
+   <img src="../img/15.jpg" alt="Three gladiators take a selfie in the arena" width="1440" height="1080" loading="lazy">
+   <img src="../img/16.jpg" alt="Police officers stack bundles of cash next to Franklin" width="1440" height="1080" loading="lazy">
+  </div>
+  <ul class="plain">
+   <li><p><strong>15 scenes from two of my videos.</strong> Each with the frame, the exact prompt and what worked or failed.</p></li>
+   <li><p><strong>3 ready-made templates.</strong> An assistant prompt that writes the video prompt for you, a fill-in template and a character sheet template.</p></li>
+   <li><p><strong>The mistakes that cost me generations</strong>, and how to avoid them.</p></li>
+   <li><p><strong>A short edit and color pass in CapCut.</strong></p></li>
+  </ul>
+  <p class="price">$15, one payment<span>You get the link right after checkout.</span></p>
+  <a class="cta buy" href="https://app.lava.top/products/4b596728-f5c7-46af-850f-53de42f0149e">Get the full guide</a>
+ </div>
+</section>
+
 <section class="final">
  <div class="wrap">
   <h2>Now <em>it's your turn</em></h2>
   <p>Open Higgsfield, take the message for the assistant from section 6 and make your first draft. If you have questions, write to me. I try to answer everyone.</p>
-  <a class="cta" href="https://www.instagram.com/mr_sukhx/">@mr_sukhx on Instagram</a>
+  <a class="cta" href="https://app.lava.top/products/4b596728-f5c7-46af-850f-53de42f0149e">Get the full guide — $15</a>
+  <a class="cta alt" href="https://www.instagram.com/mr_sukhx/">@mr_sukhx on Instagram</a>
  </div>
 </section>
 </main>

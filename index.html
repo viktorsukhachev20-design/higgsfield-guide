@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Как сделать видео в Higgsfield — бесплатный гайд sukhx</title>
-<meta name="description" content="От пустого экрана до готового ролика: какую модель брать, как писать промпт и что указать, чтобы было похоже на настоящую съёмку.">
+<title>How to make videos in Higgsfield — a free guide by sukhx</title>
+<meta name="description" content="From a blank screen to a finished video: which model to pick, how to write a prompt, and what to add so it looks like real footage.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Как сделать видео в Higgsfield — бесплатный гайд">
-<meta property="og:description" content="От пустого экрана до готового ролика: какую модель брать, как писать промпт и что указать, чтобы было похоже на настоящую съёмку.">
+<meta property="og:title" content="How to make videos in Higgsfield — a free guide">
+<meta property="og:description" content="From a blank screen to a finished video: which model to pick, how to write a prompt, and what to add so it looks like real footage.">
 <meta property="og:url" content="https://viktorsukhachev20-design.github.io/higgsfield-guide/">
-<meta property="og:image" content="https://viktorsukhachev20-design.github.io/higgsfield-guide/img/og-ru.jpg">
+<meta property="og:image" content="https://viktorsukhachev20-design.github.io/higgsfield-guide/img/og-en.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -45,6 +45,9 @@ img{max-width:100%}
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 20px 12px;max-width:680px;margin:0 auto}
 .top img{height:46px;width:auto;display:block}
 .tag{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.top .right{display:flex;align-items:center;gap:14px}
+.top .lang{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:inherit;text-decoration:none;border:1px solid currentColor;padding:5px 9px}
+.top .lang:hover{background:var(--orange);border-color:var(--orange);color:#000}
 .head{max-width:680px;margin:0 auto}
 h1{position:relative;z-index:2;margin:28px 20px 0;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:clamp(58px,17vw,104px);line-height:.86;letter-spacing:-.005em}
 h1 em{display:block;font-family:var(--serif);font-style:italic;font-weight:400;text-transform:lowercase;color:var(--orange);font-size:.92em;line-height:.95;letter-spacing:-.02em;margin-top:.04em}
@@ -163,6 +166,12 @@ pre{margin:0;padding:16px;font-family:var(--mono);font-size:14px;line-height:1.6
 .final p{max-width:28em}
 .cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;padding:0 20px;margin-top:26px;background:#000;color:var(--white);text-decoration:none;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:26px;letter-spacing:.03em}
 .cta:hover{background:var(--white);color:#000}
+.cta.buy{background:var(--orange);color:#000}
+.cta.buy:hover{background:var(--ink);color:var(--white)}
+.cta.alt{background:var(--white);color:#000;margin-top:10px}
+.cta.alt:hover{background:#000;color:var(--white)}
+.price{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:30px;line-height:1.05;margin:26px 0 0}
+.price span{display:block;font-family:var(--body);font-weight:400;text-transform:none;font-size:15px;line-height:1.4;margin-top:6px;color:var(--mute-l)}
 footer{padding:26px 0 44px;font-size:14px;color:var(--mute-d)}
 
 @media print{.prompt button,nav.toc{display:none}.card,.prompt,.note,figure{break-inside:avoid}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
@@ -172,47 +181,47 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--mute-d)}
 <div class="ticks" aria-hidden="true"></div>
 <header class="top">
   <img src="img/1.png" alt="sukhx" width="83" height="46">
-  <span class="tag">Бесплатный гайд</span>
+  <span class="right"><span class="tag">Free guide</span><a class="lang" href="ru/" title="Русская версия">RU</a></span>
 </header>
 <main>
 <div class="head">
-  <h1>Как сделать видео <em>в higgsfield</em></h1>
-  <p class="lead">От пустого экрана до готового ролика. Какую модель брать, как писать промпт и что указать, чтобы было похоже на настоящую съёмку.</p>
+  <h1>How to make videos <em>in higgsfield</em></h1>
+  <p class="lead">From a blank screen to a finished video. Which model to pick, how to write a prompt, and what to add so it looks like real footage.</p>
 </div>
 <div class="strip">
-  <img src="img/2.jpg" alt="Реклама товара: бутылка апельсиновой газировки и волна брызг" width="1400" height="1045" loading="lazy">
-  <img src="img/3.jpg" alt="Блогер говорит в камеру и держит баночку крема" width="1400" height="1045" loading="lazy">
-  <img src="img/4.jpg" alt="Кадр из истории: девушка в жёлтом плаще и пёс на остановке под дождём" width="1400" height="1045" loading="lazy">
-  <img src="img/5.jpg" alt="Абсурд: рыцарь в доспехах бежит на беговой дорожке во дворе замка" width="1400" height="1045" loading="lazy">
+  <img src="img/2.jpg" alt="Product ad: a bottle of orange soda and a wave of splashing water" width="1400" height="1045" loading="lazy">
+  <img src="img/3.jpg" alt="A creator talks to the camera and holds a jar of cream" width="1400" height="1045" loading="lazy">
+  <img src="img/4.jpg" alt="A story frame: a girl in a yellow raincoat and a dog at a bus stop in the rain" width="1400" height="1045" loading="lazy">
+  <img src="img/5.jpg" alt="Absurd: a knight in armor runs on a treadmill in a castle courtyard" width="1400" height="1045" loading="lazy">
 </div>
 <div class="band dark" style="padding-top:0">
  <div class="wrap">
-  <p class="shout">От текста до готового ролика — <em>восемь</em> шагов.</p>
+  <p class="shout">From text to a finished video — <em>eight</em> steps.</p>
   <div class="stats">
-    <div><b>8</b><span>шагов до ролика</span></div>
-    <div><b>11</b><span>частей промпта</span></div>
-    <div><b>0</b><span>камер и актёров</span></div>
+    <div><b>8</b><span>steps to a video</span></div>
+    <div><b>11</b><span>parts of a prompt</span></div>
+    <div><b>0</b><span>cameras and actors</span></div>
   </div>
-  <h3 class="sub" style="margin-top:48px">Почему Higgsfield</h3>
-  <p>Сервисов, где собраны нейросети для видео, десятки. Их называют агрегаторами. Модели внутри часто одни и те же, а удобство и возможности разные.</p>
-  <p>Я работаю в Higgsfield. Причин четыре.</p>
+  <h3 class="sub" style="margin-top:48px">Why Higgsfield</h3>
+  <p>There are dozens of services that bundle AI video models. They are called aggregators. The models inside are often the same, but the tools and the comfort are not.</p>
+  <p>I work in Higgsfield. Four reasons.</p>
   <ol class="steps">
-    <li><h3>Всё в одном аккаунте</h3><p>Seedance 2.5, Kling, Veo, Wan и модели для картинок. Одна подписка вместо пяти.</p></li>
-    <li><h3>Картинки и видео рядом</h3><p>Героя, место и сам ролик делаешь в одном сервисе.</p></li>
-    <li><h3>Цена видна до запуска</h3><p>На кнопке Generate написано, сколько спишется. Сюрпризов нет.</p></li>
-    <li><h3>Открытые инструкции</h3><p>Higgsfield сам публикует, как писать промпты под каждую модель. Этот гайд на них и стоит.</p></li>
+    <li><h3>Everything in one account</h3><p>Seedance 2.5, Kling, Veo, Wan and the image models. One subscription instead of five.</p></li>
+    <li><h3>Images and video side by side</h3><p>You make the character, the location and the video itself in one place.</p></li>
+    <li><h3>You see the price before you run</h3><p>The Generate button shows how much it will cost. No surprises.</p></li>
+    <li><h3>Open instructions</h3><p>Higgsfield publishes how to write prompts for each model. This guide is built on them.</p></li>
   </ol>
-  <p class="soft" style="margin-top:18px">Всё ниже показано на Higgsfield. Промпты и правила работают в любом сервисе, где есть те же модели.</p>
-  <nav class="toc" aria-label="Содержание">
+  <p class="soft" style="margin-top:18px">Everything below is shown in Higgsfield. The prompts and rules work in any service that has the same models.</p>
+  <nav class="toc" aria-label="Contents">
    <ol>
-    <li><a href="#s1"><span>01</span>Как это устроено</a></li>
-    <li><a href="#s2"><span>02</span>Какую модель брать</a></li>
-    <li><a href="#s3"><span>03</span>Герой, место, предмет</a></li>
-    <li><a href="#s4"><span>04</span>Где писать промпт</a></li>
-    <li><a href="#s5"><span>05</span>Как работает промпт</a></li>
-    <li><a href="#s6"><span>06</span>Промпт с чат-помощником</a></li>
-    <li><a href="#s7"><span>07</span>Как добиться реализма</a></li>
-    <li><a href="#s8"><span>08</span>Если получилось не то</a></li>
+    <li><a href="#s1"><span>01</span>How it works</a></li>
+    <li><a href="#s2"><span>02</span>Which model to pick</a></li>
+    <li><a href="#s3"><span>03</span>Character, location, object</a></li>
+    <li><a href="#s4"><span>04</span>Where to write the prompt</a></li>
+    <li><a href="#s5"><span>05</span>How a prompt works</a></li>
+    <li><a href="#s6"><span>06</span>Prompt with a chat assistant</a></li>
+    <li><a href="#s7"><span>07</span>How to get realism</a></li>
+    <li><a href="#s8"><span>08</span>If it came out wrong</a></li>
    </ol>
   </nav>
  </div>
@@ -221,22 +230,22 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--mute-d)}
 <section id="s1" class="band light">
  <div class="wrap">
   <span class="num">01</span>
-  <h2>Как это <em>устроено</em></h2>
-  <p>Higgsfield — это сервис, где собраны разные нейросети: одни делают картинки, другие видео, третьи звук. Такие нейросети здесь называют моделями.</p>
-  <p>Ролик почти всегда собирается в три шага.</p>
+  <h2>How it <em>works</em></h2>
+  <p>Higgsfield is a service that brings different neural networks together: some make images, some make video, some make sound. Here they are called models.</p>
+  <p>A video is almost always built in three steps.</p>
   <ol class="steps">
-    <li><h3>Картинки</h3><p>Герой, место, предмет — то, что должно выглядеть одинаково во всех кадрах.</p></li>
-    <li><h3>Видео</h3><p>Модель оживляет сцену по твоему описанию и по этим картинкам.</p></li>
-    <li><h3>Монтаж</h3><p>Склейка, цвет, титры — уже в CapCut или DaVinci Resolve.</p></li>
+    <li><h3>Images</h3><p>The character, the location, the object: whatever has to look the same in every frame.</p></li>
+    <li><h3>Video</h3><p>The model brings the scene to life from your description and those images.</p></li>
+    <li><h3>Editing</h3><p>Cuts, color, titles. That part happens in CapCut or DaVinci Resolve.</p></li>
   </ol>
-  <div class="note"><p>Для одной простой сценки первый шаг можно пропустить и сразу писать текст.</p></div>
-  <h3 class="sub">Пять слов, которые встретятся дальше</h3>
+  <div class="note"><p>For one simple scene you can skip the first step and go straight to the text.</p></div>
+  <h3 class="sub">Five terms you will see below</h3>
   <dl class="rows glossary">
-    <div><dt>Промпт</dt><dd>Текст-описание сцены для модели.</dd></div>
-    <div><dt>План</dt><dd>Один непрерывный кусок ролика, от склейки до склейки. По-английски shot.</dd></div>
-    <div><dt>HARD CUT</dt><dd>Резкая склейка: один план сразу сменяется другим.</dd></div>
-    <div><dt>Кредиты</dt><dd>Внутренние деньги сервиса. Каждая генерация списывает часть.</dd></div>
-    <div><dt>480p, 720p, 1080p</dt><dd>Чёткость картинки. Чем больше число, тем чётче и дороже.</dd></div>
+    <div><dt>Prompt</dt><dd>A text description of the scene for the model.</dd></div>
+    <div><dt>Shot</dt><dd>One continuous piece of the video, from one cut to the next.</dd></div>
+    <div><dt>HARD CUT</dt><dd>A sharp cut: one shot is replaced by the next at once.</dd></div>
+    <div><dt>Credits</dt><dd>The service's internal money. Every generation spends some.</dd></div>
+    <div><dt>480p, 720p, 1080p</dt><dd>Image sharpness. The higher the number, the sharper and the more expensive.</dd></div>
   </dl>
  </div>
 </section>
@@ -244,77 +253,77 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--mute-d)}
 <section id="s2" class="band dark">
  <div class="wrap">
   <span class="num">02</span>
-  <h2>Какую модель <em>брать</em></h2>
-  <p class="soft">Модель выбирай под каждую сцену отдельно. Для начала хватит одной — Seedance 2.5.</p>
-  <h3 class="sub">Видео</h3>
-  <p class="soft">Список моделей открывается по строке Model в окне Video. У каждой подписаны качество и длина ролика.</p>
-  <div class="shot-ui"><img src="img/6.png" alt="Список видеомоделей в Higgsfield: Seedance 2.5, Seedance 2.5 Draft, Higgsfield Genjutsu, Seedance 2.0, MiniMax H3, Gemini Omni Flash" width="402" height="642" loading="lazy"></div>
-  <p class="caption">Список моделей видео. Снимок от 9 октября 2026.</p>
+  <h2>Which model <em>to pick</em></h2>
+  <p class="soft">Pick the model for each scene separately. To start, one is enough: Seedance 2.5.</p>
+  <h3 class="sub">Video</h3>
+  <p class="soft">The model list opens from the Model row in the Video window. Each model shows its quality and clip length.</p>
+  <div class="shot-ui"><img src="img/6.png" alt="The list of video models in Higgsfield: Seedance 2.5, Seedance 2.5 Draft, Higgsfield Genjutsu, Seedance 2.0, MiniMax H3, Gemini Omni Flash" width="402" height="642" loading="lazy"></div>
+  <p class="caption">The list of video models. Screenshot from October 9, 2026.</p>
   <div class="cards">
-    <div class="card main"><h3>Seedance 2.5 <span class="badge">основная</span></h3><p>Живые люди, реклама, сценки из нескольких планов.</p><span class="meta">4–30 секунд · до 1080p, не на всех тарифах · звук сразу</span></div>
-    <div class="card"><h3>Seedance 2.5 Draft</h3><p>Черновик той же сцены перед чистовым запуском.</p><span class="meta">4–30 секунд · 480p</span></div>
+    <div class="card main"><h3>Seedance 2.5 <span class="badge">main pick</span></h3><p>Real-looking people, ads, scenes made of several shots.</p><span class="meta">4–30 seconds · up to 1080p, not on every plan · sound included</span></div>
+    <div class="card"><h3>Seedance 2.5 Draft</h3><p>A rough version of the same scene before the final run.</p><span class="meta">4–30 seconds · 480p</span></div>
   </div>
   <div class="cards two">
-    <div class="card"><h3>Kling 3.0</h3><p>Сцена из нескольких связанных планов подряд.</p><span class="meta">3–15 секунд · до 4K</span></div>
-    <div class="card"><h3>Google Veo</h3><p>Самое правдоподобное движение и свет. Для одного «дорогого» кадра.</p><span class="meta">короткие клипы · нужен подробный промпт</span></div>
-    <div class="card"><h3>Wan 3.0</h3><p>Нужно задать первый и последний кадр. Перекрасить готовое видео.</p><span class="meta">2–30 секунд · 1080p</span></div>
-    <div class="card"><h3>Minimax Hailuo</h3><p>Быстрые дешёвые пробы идеи.</p><span class="meta">в списке подписан как самый быстрый и доступный</span></div>
+    <div class="card"><h3>Kling 3.0</h3><p>A scene made of several connected shots in a row.</p><span class="meta">3–15 seconds · up to 4K</span></div>
+    <div class="card"><h3>Google Veo</h3><p>The most believable motion and light. For one "expensive" shot.</p><span class="meta">short clips · needs a detailed prompt</span></div>
+    <div class="card"><h3>Wan 3.0</h3><p>When you need to set the first and the last frame. Recoloring a finished video.</p><span class="meta">2–30 seconds · 1080p</span></div>
+    <div class="card"><h3>Minimax Hailuo</h3><p>Fast, cheap tests of an idea.</p><span class="meta">labeled in the list as the fastest and most affordable</span></div>
   </div>
-  <h3 class="sub">Картинки</h3>
+  <h3 class="sub">Images</h3>
   <div class="cards two">
-    <div class="card"><h3>Soul 2.0 и Soul Cinema</h3><p>Портрет героя: модный или «киношный» вид.</p></div>
-    <div class="card"><h3>Nano Banana Pro</h3><p>Быстро поменять что-то вокруг героя, сохранив его самого. Предмет и товар.</p></div>
-    <div class="card"><h3>Seedream 5.0 Pro</h3><p>Сложная сцена с длинным описанием.</p></div>
-    <div class="card"><h3>GPT Image</h3><p>В картинке нужен текст или точный цвет бренда: с ними справляется лучше многих.</p></div>
+    <div class="card"><h3>Soul 2.0 and Soul Cinema</h3><p>A portrait of the character: a fashion or a cinematic look.</p></div>
+    <div class="card"><h3>Nano Banana Pro</h3><p>Quickly change something around the character while keeping the character. Objects and products.</p></div>
+    <div class="card"><h3>Seedream 5.0 Pro</h3><p>A complex scene with a long description.</p></div>
+    <div class="card"><h3>GPT Image</h3><p>When the image needs text or an exact brand color: it handles them better than most.</p></div>
   </div>
-  <p class="caption" style="margin-top:14px">Список моделей обновляется, названия могут отличаться. Бери самую свежую версию той же семьи. Здесь список на 9 октября 2026.</p>
+  <p class="caption" style="margin-top:14px">The model list keeps changing and names may differ. Take the newest version of the same family. This is the list as of October 9, 2026.</p>
  </div>
 </section>
 
 <section id="s3" class="band light">
  <div class="wrap">
   <span class="num">03</span>
-  <h2>Герой <span class="dash">—</span> место <span class="dash">—</span> предмет</h2>
-  <p>Модели можно дать не только текст, но и картинки-образцы: героя, место, товар. В Higgsfield они называются References. Модель держится образца, и герой не меняется от ролика к ролику.</p>
-  <p>Когда образец нужен? Ответ даёт один вопрос:</p>
-  <p class="formula">Появится ли это <em>больше одного раза?</em></p>
+  <h2>Character <span class="dash">—</span> location <span class="dash">—</span> object</h2>
+  <p>You can give the model not only text but also reference images: the character, the location, the product. In Higgsfield they are called References. The model sticks to the reference, and the character stays the same from video to video.</p>
+  <p>When do you need a reference? One question answers it:</p>
+  <p class="formula">Will it appear <em>more than once?</em></p>
   <dl class="rows">
-    <div><dt>Одна сценка, герой безымянный</dt><dd>Ничего не готовь. Опиши героя словами в промпте.</dd></div>
-    <div><dt>Один герой в нескольких роликах</dt><dd>Сначала сделай его картинку-образец и сохрани.</dd></div>
-    <div><dt>Реклама: товар точь-в-точь</dt><dd>Загрузи фото товара. Словами его не описывай.</dd></div>
-    <div><dt>Одно место, несколько планов</dt><dd>Загрузи картинку места.</dd></div>
-    <div><dt>Важны точные цвета и стиль</dt><dd>Загрузи картинку-образец стиля.</dd></div>
+    <div><dt>One scene, a nameless character</dt><dd>Prepare nothing. Describe the character in words in the prompt.</dd></div>
+    <div><dt>One character in several videos</dt><dd>Make a reference image of the character first and save it.</dd></div>
+    <div><dt>An ad: the product exactly as it is</dt><dd>Upload a photo of the product. Don't describe it in words.</dd></div>
+    <div><dt>One location, several shots</dt><dd>Upload an image of the location.</dd></div>
+    <div><dt>Exact colors and style matter</dt><dd>Upload a style reference image.</dd></div>
   </dl>
   <figure>
     <div class="pair">
-      <img src="img/7.jpg" alt="Рыжая девушка в зелёной куртке лепит чашу на гончарном круге, крупный план" width="1400" height="1045" loading="lazy">
-      <img src="img/8.jpg" alt="Та же девушка несёт чашу к полкам, общий план мастерской" width="1400" height="1045" loading="lazy">
+      <img src="img/7.jpg" alt="A red-haired woman in a green jacket shapes a bowl on a potter's wheel, close-up" width="1400" height="1045" loading="lazy">
+      <img src="img/8.jpg" alt="The same woman carries the bowl to the shelves, wide shot of the studio" width="1400" height="1045" loading="lazy">
     </div>
-    <figcaption>Одна героиня в двух планах. Второй кадр сделан по первому как по образцу.</figcaption>
+    <figcaption>One character in two shots. The second frame was made with the first one as a reference.</figcaption>
   </figure>
-  <h3 class="sub">Как сделать образец героя</h3>
-  <div class="shot-ui"><img src="img/9.png" alt="Раздел Image в Higgsfield: поле для описания, кнопка выбора модели, формат и качество" width="640" height="88" loading="lazy"></div>
-  <figcaption style="margin:8px 0 18px">Раздел Image: поле для описания внизу экрана, рядом — выбор модели.</figcaption>
+  <h3 class="sub">How to make a character reference</h3>
+  <div class="shot-ui"><img src="img/9.png" alt="The Image section in Higgsfield: a description field, a model button, aspect ratio and quality" width="640" height="88" loading="lazy"></div>
+  <figcaption style="margin:8px 0 18px">The Image section: the description field is at the bottom of the screen, the model picker is next to it.</figcaption>
   <ol class="steps">
-    <li><h3>Открой раздел Image</h3><p>Он сверху, рядом с Video. Выбери модель картинок из раздела 2.</p></li>
-    <li><h3>Опиши героя</h3><p>Возраст, лицо, волосы, сложение, одежда. Попроси лист с героем на ровном сером фоне: лицо анфас и фигура в рост.</p></li>
-    <li><h3>Скачай картинку</h3><p>Загружай её в References в каждом ролике с этим героем.</p></li>
+    <li><h3>Open the Image section</h3><p>It is at the top, next to Video. Pick an image model from section 2.</p></li>
+    <li><h3>Describe the character</h3><p>Age, face, hair, build, clothes. Ask for a character sheet on a plain gray background: the face from the front and a full-body view.</p></li>
+    <li><h3>Download the image</h3><p>Upload it to References in every video with this character.</p></li>
   </ol>
-  <h3 class="sub">Порядок</h3>
-  <p>Сначала всё, что повторяется: герой, его одежда, место, предметы. Потом видео. Если начать с видео — герой в каждом ролике будет новым человеком.</p>
+  <h3 class="sub">The order</h3>
+  <p>First, everything that repeats: the character, their clothes, the location, the objects. Then the video. If you start with the video, the character will be a new person in every clip.</p>
  </div>
 </section>
 
 <section id="s4" class="band dark">
  <div class="wrap">
   <span class="num">04</span>
-  <h2>Где писать <em>промпт</em></h2>
-  <p class="soft">Промпт — это описание сцены для модели. Раздел Video — в верхнем меню сайта.</p>
-  <div class="shot-ui"><img src="img/10.png" alt="Верхнее меню Higgsfield: Explore, Image, Video, Audio. Video выделен" width="236" height="28" loading="lazy" style="width:236px"></div>
-  <p class="soft" style="margin-top:14px">Вот окно, в котором всё происходит. Цифры на снимке — номера шагов.</p>
+  <h2>Where to write <em>the prompt</em></h2>
+  <p class="soft">A prompt is a description of the scene for the model. The Video section is in the top menu of the site.</p>
+  <div class="shot-ui"><img src="img/10.png" alt="The top menu of Higgsfield: Explore, Image, Video, Audio. Video is highlighted" width="236" height="28" loading="lazy" style="width:236px"></div>
+  <p class="soft" style="margin-top:14px">This is the window where everything happens. The numbers on the screenshot are the step numbers.</p>
   <div class="shot-ui">
     <div class="pin">
-      <img src="img/11.png" alt="Окно Higgsfield, раздел Video: вкладка Create Video, блок Add references, поле Prompt, строка Model, кнопки длины, формата и качества, кнопка Generate" width="320" height="768" loading="lazy">
+      <img src="img/11.png" alt="The Higgsfield window, Video section: the Create Video tab, the Add references block, the Prompt field, the Model row, the length, aspect ratio and quality buttons, the Generate button" width="320" height="768" loading="lazy">
       <span class="n" style="left:19%;top:6.6%" aria-hidden="true">1</span>
       <span class="n" style="left:84%;top:76%" aria-hidden="true">2</span>
       <span class="n" style="left:80%;top:43%" aria-hidden="true">3</span>
@@ -324,46 +333,46 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--mute-d)}
       <span class="n" style="left:90%;top:93.5%" aria-hidden="true">7</span>
     </div>
   </div>
-  <p class="caption">Окно на higgsfield.ai, раздел Video. Снимок от 9 октября 2026.</p>
+  <p class="caption">The window on higgsfield.ai, Video section. Screenshot from October 9, 2026.</p>
   <ol class="steps">
-    <li><h3>Открой раздел Video</h3><p>Зайди на higgsfield.ai, зарегистрируйся или войди и сверху нажми Video. Слева откроется вкладка Create Video.</p></li>
-    <li><h3>Выбери модель</h3><p>Найди строку Model под полем для текста, нажми на неё и выбери Seedance 2.5.</p></li>
-    <li><h3>Загрузи образцы</h3><p>Если есть образцы героя, места или товара: Add references. Сюда можно положить картинку, видео или звук. Это делается до текста.</p></li>
-    <li><h3>Вставь промпт</h3><p>В поле Prompt — текст на английском. Как его написать, в разделах 5 и 6.</p></li>
-    <li><h3>Оставь звук</h3><p>Под полем кнопка On — это звук. Модель делает его сама, вместе с видео.</p></li>
-    <li><h3>Длина, формат, качество</h3><p>Три кнопки в ряд. Формат 9:16 — для Reels и TikTok, 16:9 — для YouTube.</p></li>
-    <li><h3>Посмотри на цену</h3><p>На кнопке Generate написано, сколько кредитов (внутренних денег сервиса) спишется. Число меняется вместе с длиной и качеством.</p></li>
-    <li><h3>Нажми Generate</h3><p>Через пару минут готовый ролик появится справа, в History. Скачай его. Если в промпте было несколько планов, ролик уже склеен.</p></li>
+    <li><h3>Open the Video section</h3><p>Go to higgsfield.ai, sign up or log in, and click Video at the top. The Create Video tab opens on the left.</p></li>
+    <li><h3>Pick the model</h3><p>Find the Model row under the text field, click it and choose Seedance 2.5.</p></li>
+    <li><h3>Upload references</h3><p>If you have references for the character, location or product: Add references. You can put an image, a video or a sound here. Do it before the text.</p></li>
+    <li><h3>Paste the prompt</h3><p>Your text goes into the Prompt field. How to write it is in sections 5 and 6.</p></li>
+    <li><h3>Leave the sound on</h3><p>The On button under the field is the sound. The model makes it by itself, together with the video.</p></li>
+    <li><h3>Length, aspect ratio, quality</h3><p>Three buttons in a row. 9:16 is for Reels and TikTok, 16:9 is for YouTube.</p></li>
+    <li><h3>Look at the price</h3><p>The Generate button shows how many credits (the service's internal money) will be spent. The number changes with length and quality.</p></li>
+    <li><h3>Click Generate</h3><p>In a couple of minutes the finished video appears on the right, in History. Download it. If the prompt had several shots, the video is already cut together.</p></li>
   </ol>
-  <div class="note"><h3>Сначала черновик</h3><p>Для пробы поставь качество пониже или выбери в списке моделей Seedance 2.5 Draft — выйдет заметно дешевле, цену смотри на кнопке Generate. Когда всё встало как надо — тот же промпт в хорошем качестве.</p></div>
-  <div class="note"><h3>Что ещё есть в окне</h3><p>Кнопка Rerun под роликом в History запускает тот же промпт ещё раз. Вкладка Extend Video продлевает готовый ролик.</p></div>
+  <div class="note"><h3>Draft first</h3><p>For a test, set a lower quality or choose Seedance 2.5 Draft in the model list. It comes out noticeably cheaper; check the price on the Generate button. When everything is in place, run the same prompt in good quality.</p></div>
+  <div class="note"><h3>What else is in the window</h3><p>The Rerun button under a video in History runs the same prompt again. The Extend Video tab makes a finished video longer.</p></div>
  </div>
 </section>
 
 <section id="s5" class="band light">
  <div class="wrap">
   <span class="num">05</span>
-  <h2>Как работает <em>промпт</em></h2>
-  <p>Модели нужен список: что, кто, где, как снято. Рассказ «с начала до конца» она понимает хуже.</p>
-  <p>Промпт — это один английский текст, в котором каждая часть начинается с пометки. Порядок советует сам Higgsfield:</p>
+  <h2>How a prompt <em>works</em></h2>
+  <p>The model needs a list: what, who, where, how it is shot. It understands a story told "from start to finish" worse.</p>
+  <p>A prompt is one text where each part starts with a label. This order is recommended by Higgsfield itself:</p>
   <dl class="parts">
-    <div><dt>GLOBAL STYLE</dt><dd>Жанр, цвет, вид плёнки или цифры, формат кадра и чего быть не должно.</dd></div>
-    <div><dt>SCENE</dt><dd>Одна строка: что происходит, где, какое настроение.</dd></div>
-    <div><dt>CHARACTERS</dt><dd>Каждый человек: лицо, волосы, сложение, одежда.</dd></div>
-    <div><dt>LOCATION</dt><dd>Место и предметы в нём — отдельно от людей.</dd></div>
-    <div><dt>FIRST FRAME AND BLOCKING</dt><dd>Кто где стоит и куда смотрит в первом кадре.</dd></div>
-    <div><dt>SHOT 1, SHOT 2…</dt><dd>Каждый план (кусок ролика от склейки до склейки): крупность и действие, по секундам.</dd></div>
-    <div><dt>OPTICS</dt><dd>Объектив для каждого плана.</dd></div>
-    <div><dt>CAMERA</dt><dd>Движение камеры для каждого плана.</dd></div>
-    <div><dt>PHYSICS</dt><dd>Как движутся ткань, волосы, дым, вода.</dd></div>
-    <div><dt>LIGHTING</dt><dd>Откуда свет и какой.</dd></div>
-    <div><dt>AUDIO</dt><dd>Что слышно и чего быть не должно.</dd></div>
+    <div><dt>GLOBAL STYLE</dt><dd>Genre, color, film or digital look, aspect ratio, and what must not be there.</dd></div>
+    <div><dt>SCENE</dt><dd>One line: what happens, where, what mood.</dd></div>
+    <div><dt>CHARACTERS</dt><dd>Each person: face, hair, build, clothes.</dd></div>
+    <div><dt>LOCATION</dt><dd>The place and the objects in it, separately from the people.</dd></div>
+    <div><dt>FIRST FRAME AND BLOCKING</dt><dd>Who stands where and looks where in the first frame.</dd></div>
+    <div><dt>SHOT 1, SHOT 2…</dt><dd>Each shot (a piece of the video from cut to cut): framing and action, by the second.</dd></div>
+    <div><dt>OPTICS</dt><dd>The lens for each shot.</dd></div>
+    <div><dt>CAMERA</dt><dd>The camera movement for each shot.</dd></div>
+    <div><dt>PHYSICS</dt><dd>How fabric, hair, smoke and water move.</dd></div>
+    <div><dt>LIGHTING</dt><dd>Where the light comes from and what kind it is.</dd></div>
+    <div><dt>AUDIO</dt><dd>What is heard and what must not be heard.</dd></div>
   </dl>
-  <p>Пропустишь часть — модель додумает её сама, и чаще всего не так. Например, без LOCATION место меняется от плана к плану.</p>
-  <div class="note"><h3>Если загрузил образцы</h3><p>Героя словами заново не описывай. Пиши, что взять с картинки: <code>identity and wardrobe locked to the reference image, ignore the reference backdrop</code>. Текст тогда описывает только действие и камеру.</p></div>
-  <h3 class="sub">Простой вариант для первого раза</h3>
-  <p>Одна-две фразы в таком порядке: кто и что делает → где и какой свет → как движется камера → настроение. Отдельно звуки.</p>
-  <div class="prompt"><div class="bar"><span class="tag">Пример</span></div>
+  <p>Skip a part and the model fills it in by itself, usually the wrong way. Without LOCATION, for example, the place changes from shot to shot.</p>
+  <div class="note"><h3>If you uploaded references</h3><p>Don't describe the character in words again. Say what to take from the image: <code>identity and wardrobe locked to the reference image, ignore the reference backdrop</code>. The text then describes only the action and the camera.</p></div>
+  <h3 class="sub">A simple version for the first time</h3>
+  <p>One or two sentences in this order: who is doing what → where and in what light → how the camera moves → the mood. Sounds go separately.</p>
+  <div class="prompt"><div class="bar"><span class="tag">Example</span></div>
 <pre>A woman walks through a crowded train station at rush hour, checking her phone, camera tracking close at shoulder height, warm overhead fluorescent light, tense and rushed. SFX: station ambient noise, announcements in the background.</pre></div>
  </div>
 </section>
@@ -371,94 +380,93 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--mute-d)}
 <section id="s6" class="band dark">
  <div class="wrap">
   <span class="num">06</span>
-  <h2>Промпт с <em>чат-помощником</em></h2>
-  <p>Писать на английском с нуля не нужно. Опиши сцену по-русски, а в промпт её превратит чат-помощник: ChatGPT, Claude, Gemini или любой другой.</p>
-  <h3 class="sub">На бесплатном тарифе</h3>
-  <p class="soft">В бесплатном чате правила обычно приходится давать заново в каждом разговоре, а число сообщений ограничено. Поэтому всё нужное давай одним сообщением. Скопируй и допиши свою сцену в конце.</p>
-  <div class="prompt"><div class="bar"><span class="tag">Сообщение помощнику</span></div>
-<pre>Ты пишешь промпты для видеомодели Seedance 2.5.
+  <h2>Prompt with a <em>chat assistant</em></h2>
+  <p>You don't have to write the prompt from scratch. Describe the scene in your own words, and a chat assistant turns it into a prompt: ChatGPT, Claude, Gemini or any other.</p>
+  <h3 class="sub">On a free plan</h3>
+  <p class="soft">In a free chat you usually have to give the rules again in every conversation, and the number of messages is limited. So send everything in one message. Copy it and add your scene at the end.</p>
+  <div class="prompt"><div class="bar"><span class="tag">Message to the assistant</span></div>
+<pre>You write prompts for the Seedance 2.5 video model.
 
-Правила:
-1. Ответ — один текст на английском, каждый раздел начинается с пометки. Порядок: GLOBAL STYLE, SCENE, CHARACTERS, LOCATION, FIRST FRAME AND BLOCKING, SHOT 1…N (с секундами), OPTICS, CAMERA, PHYSICS, LIGHTING, AUDIO.
-2. В каждом плане одно действие, и оно уже идёт в первом кадре.
-3. Предметы называй простыми словами: smartphone, glass bottle.
-4. У каждого плана своё движение камеры. Камера никогда не стоит мёртво.
-5. Планы разной длины. В конце каждого плана, кроме последнего, пиши HARD CUT (резкая склейка).
-6. Свет: откуда он идёт и какой. Не «красивый свет».
-7. В конце GLOBAL STYLE — запреты: no text on screen, no subtitles, no logos, no slow motion.
-8. Лица придуманные: every face is fully original and invented.
-9. После промпта дай перевод на русский, чтобы я проверил смысл.
+Rules:
+1. The answer is one text, and each section starts with a label. Order: GLOBAL STYLE, SCENE, CHARACTERS, LOCATION, FIRST FRAME AND BLOCKING, SHOT 1…N (with seconds), OPTICS, CAMERA, PHYSICS, LIGHTING, AUDIO.
+2. One action per shot, and it is already in progress in the first frame.
+3. Name objects in plain words: smartphone, glass bottle.
+4. Each shot has its own camera movement. The camera is never completely still.
+5. Shots have different lengths. At the end of every shot except the last one, write HARD CUT (a sharp cut).
+6. Light: where it comes from and what kind it is. Not "beautiful light".
+7. At the end of GLOBAL STYLE, the bans: no text on screen, no subtitles, no logos, no slow motion.
+8. Faces are invented: every face is fully original and invented.
 
-Сначала задай мне до трёх вопросов, если чего-то не хватает. Потом пиши.
+First ask me up to three questions if something is missing. Then write.
 
-Моя сцена: [опиши по-русски: кто, что делает, где, сколько секунд, вертикально или горизонтально]</pre></div>
-  <p class="soft">Дальше проси правки по одной: «в плане 2 замени движение камеры на медленное приближение, остальное не трогай».</p>
-  <h3 class="sub">На платном тарифе</h3>
-  <p class="soft">Что именно доступно, зависит от сервиса и тарифа — проверь в своём чате.</p>
+My scene: [describe: who, what they are doing, where, how many seconds, vertical or horizontal]</pre></div>
+  <p class="soft">After that, ask for one change at a time: "in shot 2 replace the camera movement with a slow push-in, leave the rest as it is".</p>
+  <h3 class="sub">On a paid plan</h3>
+  <p class="soft">What exactly is available depends on the service and the plan. Check in your own chat.</p>
   <ul class="plain">
-    <li><h3>Сохрани правила один раз</h3><p>Создай проект (в ChatGPT и Claude это так и называется) и положи туда правила из блока выше. В новых разговорах внутри проекта они уже действуют.</p></li>
-    <li><h3>Покажи картинку</h3><p>Приложи кадр-образец или картинку героя и попроси: «опиши героя и свет так, чтобы модель повторила». С картинки помощник описывает точнее, чем человек по памяти.</p></li>
-    <li><h3>Разбери неудачу</h3><p>Приложи стоп-кадр из получившегося ролика и промпт: «вот что просил, вот что вышло — что в промпте не так? Поменяй одну вещь».</p></li>
-    <li><h3>Веди журнал</h3><p>В том же проекте храни промпты, которые сработали. Следующий ролик проси писать «как тот, что сработал, но с другим героем и местом».</p></li>
+    <li><h3>Save the rules once</h3><p>Create a project (that is what it is called in ChatGPT and Claude) and put the rules from the block above into it. In new conversations inside the project they already apply.</p></li>
+    <li><h3>Show an image</h3><p>Attach a reference frame or an image of the character and ask: "describe the character and the light so that the model can repeat them". An assistant describes from an image more precisely than a person does from memory.</p></li>
+    <li><h3>Break down a failure</h3><p>Attach a still from the video you got and the prompt: "this is what I asked for, this is what came out. What is wrong in the prompt? Change one thing".</p></li>
+    <li><h3>Keep a log</h3><p>Store the prompts that worked in the same project. Ask for the next video "like the one that worked, but with a different character and location".</p></li>
   </ul>
-  <div class="note" style="margin-top:26px"><p>Промпт по правилам напишет и бесплатный помощник, и картинки многие бесплатные версии тоже читают. Платный удобнее тем, что помнит правила и реже обрывает разговор на середине.</p></div>
+  <div class="note" style="margin-top:26px"><p>A free assistant will also write a prompt by the rules, and many free versions read images too. A paid one is more convenient because it remembers the rules and cuts the conversation off in the middle less often.</p></div>
  </div>
 </section>
 
 <section id="s7" class="band light">
  <div class="wrap">
   <span class="num">07</span>
-  <h2>Как добиться <em>реализма</em></h2>
-  <p>Модель по умолчанию делает глянцевую картинку. Чтобы было похоже на съёмку, прямо проси несовершенства. Строки ниже вставляй в промпт как есть.</p>
+  <h2>How to get <em>realism</em></h2>
+  <p>By default the model makes a glossy picture. To make it look like real footage, ask for imperfections directly. Paste the lines below into your prompt as they are.</p>
 
-  <h3 class="sub">Кожа и лицо</h3>
-  <div class="prompt"><div class="bar"><span class="tag">В CHARACTERS</span></div>
+  <h3 class="sub">Skin and face</h3>
+  <div class="prompt"><div class="bar"><span class="tag">In CHARACTERS</span></div>
 <pre>skin unretouched and hyper-detailed: pores, fine lines, slight asymmetry. Natural pore texture, no over-retouching, no beauty filter.</pre></div>
-  <p>Добавь живые мелочи: <code>natural blinks</code>, реакция с опозданием на полсекунды.</p>
+  <p>Add small living details: <code>natural blinks</code>, a reaction that comes half a second late.</p>
 
-  <h3 class="sub">Свет</h3>
-  <p>Один настоящий источник и его направление.</p>
-  <div class="prompt"><div class="bar"><span class="tag">В LIGHTING</span></div>
+  <h3 class="sub">Light</h3>
+  <p>One real source and its direction.</p>
+  <div class="prompt"><div class="bar"><span class="tag">In LIGHTING</span></div>
 <pre>one real light source: high midday sun from the left, hard shadows</pre></div>
-  <p>Полезно писать и чего не надо: <code>NOT soft, NOT diffused</code>.</p>
+  <p>It also helps to say what you don't want: <code>NOT soft, NOT diffused</code>.</p>
   <figure>
-    <img src="img/12.jpg" alt="Часовщик за верстаком: свет падает лучом из одного окна слева, остальная комната в тени" width="1400" height="1045" loading="lazy">
-    <figcaption>Один источник света: окно слева. Остальная комната уходит в тень.</figcaption>
+    <img src="img/12.jpg" alt="A watchmaker at his bench: light falls in a beam from one window on the left, the rest of the room is in shadow" width="1400" height="1045" loading="lazy">
+    <figcaption>One light source: the window on the left. The rest of the room falls into shadow.</figcaption>
   </figure>
 
-  <h3 class="sub">Камера</h3>
-  <p>Назови, кто и как снимает. Съёмка с рук:</p>
-  <div class="prompt"><div class="bar"><span class="tag">В CAMERA</span></div>
+  <h3 class="sub">Camera</h3>
+  <p>Say who is shooting and how. Handheld:</p>
+  <div class="prompt"><div class="bar"><span class="tag">In CAMERA</span></div>
 <pre>handheld weight, operator breathing, small human corrections, no smooth drone glides</pre></div>
-  <p>Съёмка со штатива или тележки:</p>
-  <div class="prompt"><div class="bar"><span class="tag">В CAMERA</span></div>
+  <p>On a tripod or a dolly:</p>
+  <div class="prompt"><div class="bar"><span class="tag">In CAMERA</span></div>
 <pre>slow, deliberate, machine-smooth dolly move, no handheld jitter</pre></div>
-  <p>Для ролика, как будто снятого на телефон: <code>arm's-length wobble, tiny refocus moments</code>.</p>
+  <p>For a video that looks shot on a phone: <code>arm's-length wobble, tiny refocus moments</code>.</p>
 
-  <h3 class="sub">Объектив и плёнка</h3>
-  <p>Задай один объектив на план, например <code>35mm lens</code>, и не меняй его внутри плана. Для «киношного» вида добавь зерно:</p>
-  <div class="prompt"><div class="bar"><span class="tag">В GLOBAL STYLE</span></div>
+  <h3 class="sub">Lens and film</h3>
+  <p>Set one lens per shot, for example <code>35mm lens</code>, and don't change it inside the shot. For a cinematic look, add grain:</p>
+  <div class="prompt"><div class="bar"><span class="tag">In GLOBAL STYLE</span></div>
 <pre>light authentic 35mm film grain, halation bloom on highlights</pre></div>
 
-  <h3 class="sub">Движение и вес</h3>
-  <p>Главный признак нейросети — всё «плывёт». Проси вес:</p>
-  <div class="prompt"><div class="bar"><span class="tag">В PHYSICS</span></div>
+  <h3 class="sub">Motion and weight</h3>
+  <p>The main giveaway of AI video is that everything "floats". Ask for weight:</p>
+  <div class="prompt"><div class="bar"><span class="tag">In PHYSICS</span></div>
 <pre>walking carries true weight: heel strike, weight transfer. Hair strands move and release, never static. Fabric lags behind the body.</pre></div>
-  <p>И всегда: <code>real-time motion, no slow motion</code>.</p>
+  <p>And always: <code>real-time motion, no slow motion</code>.</p>
 
-  <h3 class="sub">Звук</h3>
-  <p>Только звуки места:</p>
-  <div class="prompt"><div class="bar"><span class="tag">В AUDIO</span></div>
+  <h3 class="sub">Sound</h3>
+  <p>Only the sounds of the place:</p>
+  <div class="prompt"><div class="bar"><span class="tag">In AUDIO</span></div>
 <pre>on-location sound only: footsteps on wet pavement, distant traffic. No music, no narration.</pre></div>
 
-  <h3 class="sub">Что ещё помогает</h3>
+  <h3 class="sub">What else helps</h3>
   <ul class="plain">
-    <li><h3>Одно действие на план</h3><p>Три действия за три секунды модель превращает в кашу.</p></li>
-    <li><h3>Герой крупно</h3><p>Герой и главный предмет занимают не меньше половины кадра. Мелкое рисуется хуже.</p></li>
-    <li><h3>Добавь второго человека</h3><p>Если сцена позволяет: прохожего, продавца. Кадр, где на героя кто-то реагирует, выглядит живее.</p></li>
-    <li><h3>Никто не смотрит в камеру</h3><p>Если это не разговор со зрителем: <code>nobody looks into the lens</code>.</p></li>
-    <li><h3>Текст в кадре не проси</h3><p>Выходит абракадабра. Надписи добавляй в монтаже.</p></li>
-    <li><h3>Цвет доводи в монтаже</h3><p>Если модель не дала нужное зерно или цвет с двух попыток, не трать кредиты — добавь их в монтаже.</p></li>
+    <li><h3>One action per shot</h3><p>Three actions in three seconds turn into a mess.</p></li>
+    <li><h3>Keep the character big</h3><p>The character and the main object take up at least half of the frame. Small things are drawn worse.</p></li>
+    <li><h3>Add a second person</h3><p>If the scene allows it: a passer-by, a seller. A frame where someone reacts to the character looks more alive.</p></li>
+    <li><h3>Nobody looks at the camera</h3><p>Unless it is a talk to the viewer: <code>nobody looks into the lens</code>.</p></li>
+    <li><h3>Don't ask for text in the frame</h3><p>It comes out as gibberish. Add captions in editing.</p></li>
+    <li><h3>Finish the color in editing</h3><p>If the model didn't give you the grain or color you want in two tries, don't spend credits. Add them in editing.</p></li>
   </ul>
  </div>
 </section>
@@ -466,46 +474,69 @@ footer{padding:26px 0 44px;font-size:14px;color:var(--mute-d)}
 <section id="s8" class="band dark">
  <div class="wrap">
   <span class="num">08</span>
-  <h2>Если получилось <em>не то</em></h2>
+  <h2>If it came out <em>wrong</em></h2>
   <ol class="steps">
-    <li><h3>Меняй одну вещь за раз</h3><p>Или промпт, или образец — не оба сразу. Иначе не поймёшь, что помогло.</p></li>
-    <li><h3>Плох один план — правь только его</h3><p>Поменяй описание этого плана и запусти снова. Остальной текст не трогай.</p></li>
-    <li><h3>Две-четыре попытки — это нормально</h3><p>Столько обычно уходит на один кадр.</p></li>
-    <li><h3>Не спорь с моделью</h3><p>Если она упорно не делает точную позу рук или толпу, которая реагирует по команде, — придумай кадр по-другому и не трать кредиты.</p></li>
+    <li><h3>Change one thing at a time</h3><p>Either the prompt or the reference, not both. Otherwise you won't know what helped.</p></li>
+    <li><h3>One bad shot? Fix only that shot</h3><p>Change the description of that shot and run again. Leave the rest of the text alone.</p></li>
+    <li><h3>Two to four tries is normal</h3><p>That is how many one shot usually takes.</p></li>
+    <li><h3>Don't argue with the model</h3><p>If it keeps failing at an exact hand pose or a crowd that reacts on cue, think of a different shot and save your credits.</p></li>
   </ol>
+ </div>
+</section>
+
+<section id="full" class="band light">
+ <div class="wrap">
+  <span class="num">Full guide</span>
+  <h2>Want the whole video, <em>not one shot?</em></h2>
+  <p>This guide got you to your first video. The full guide shows how I build a complete absurd reel, like the gladiators on scooters and Benjamin Franklin in 1985 Los Angeles.</p>
+  <div class="strip" style="padding:0;margin:24px 0">
+   <img src="img/13.jpg" alt="A legionary rides an electric scooter through a Roman market" width="1440" height="1080" loading="lazy">
+   <img src="img/14.jpg" alt="A cashier holds a hundred-dollar bill next to Benjamin Franklin" width="1440" height="1080" loading="lazy">
+   <img src="img/15.jpg" alt="Three gladiators take a selfie in the arena" width="1440" height="1080" loading="lazy">
+   <img src="img/16.jpg" alt="Police officers stack bundles of cash next to Franklin" width="1440" height="1080" loading="lazy">
+  </div>
+  <ul class="plain">
+   <li><p><strong>15 scenes from two of my videos.</strong> Each with the frame, the exact prompt and what worked or failed.</p></li>
+   <li><p><strong>3 ready-made templates.</strong> An assistant prompt that writes the video prompt for you, a fill-in template and a character sheet template.</p></li>
+   <li><p><strong>The mistakes that cost me generations</strong>, and how to avoid them.</p></li>
+   <li><p><strong>A short edit and color pass in CapCut.</strong></p></li>
+  </ul>
+  <p class="price">$15, one payment<span>You get the link right after checkout.</span></p>
+  <a class="cta buy" href="https://app.lava.top/products/4b596728-f5c7-46af-850f-53de42f0149e">Get the full guide</a>
  </div>
 </section>
 
 <section class="final">
  <div class="wrap">
-  <h2>Теперь <em>твоя очередь</em></h2>
-  <p>Открой Higgsfield, возьми сообщение для помощника из раздела 6 и сделай первый черновик. Будут вопросы — пиши, стараюсь отвечать всем.</p>
-  <a class="cta" href="https://www.instagram.com/mr_sukhx/">@mr_sukhx в Instagram</a>
+  <h2>Now <em>it's your turn</em></h2>
+  <p>Open Higgsfield, take the message for the assistant from section 6 and make your first draft. If you have questions, write to me. I try to answer everyone.</p>
+  <a class="cta" href="https://app.lava.top/products/4b596728-f5c7-46af-850f-53de42f0149e">Get the full guide — $15</a>
+  <a class="cta alt" href="https://www.instagram.com/mr_sukhx/">@mr_sukhx on Instagram</a>
  </div>
 </section>
 </main>
 <footer>
- <div class="wrap">Гайд sukhx. Названия моделей и кнопок — на 9 октября 2026. Higgsfield их меняет, смысл шагов остаётся.</div>
+ <div class="wrap">A guide by sukhx. Model and button names are as of October 9, 2026. Higgsfield changes them; the meaning of the steps stays the same.</div>
 </footer>
 <script>
-// кнопка «Скопировать» в каждом блоке с промптом
+// кнопка «Copy» в каждом блоке с промптом
 document.querySelectorAll('.prompt').forEach(function (box) {
   var btn = document.createElement('button');
   btn.type = 'button';
-  btn.textContent = 'Скопировать';
+  btn.textContent = 'Copy';
   btn.setAttribute('aria-live', 'polite');
   btn.addEventListener('click', function () {
     var text = box.querySelector('pre').textContent;
     var done = function () {
-      btn.textContent = 'Скопировано';
+      btn.textContent = 'Copied';
       btn.classList.add('done');
-      setTimeout(function () { btn.textContent = 'Скопировать'; btn.classList.remove('done'); }, 1800);
+      setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1800);
     };
     var fallback = function () { // для страницы, открытой как файл: там navigator.clipboard недоступен
       var ta = document.createElement('textarea');
       ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
       document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); done(); } catch (e) { btn.textContent = 'Выдели текст'; }
+      try { document.execCommand('copy'); done(); } catch (e) { btn.textContent = 'Select the text'; }
       document.body.removeChild(ta);
     };
     if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(done, fallback);
